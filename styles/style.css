@@ -19,6 +19,7 @@
   background-color: #f2f2f2;
   /*вся шапка - флекс-контейнер для удобной работы с эл-ми*/
   display: flex;
+  overflow: hidden;
 }
 
 /*логотип, как отдельный блок*/
@@ -77,6 +78,10 @@
 /*для всех ссылок с классом link*/
 .link {
   text-decoration: none;
+}
+
+.link_header {
+  color: #2f80ed;
 }
 
 /*создаём синий квадрат-фон и позиционируем его*/
@@ -175,6 +180,7 @@
   position: relative;
   height: 790px;
   background-color: #f2f2f2;
+  padding-top: 100px;
   /*весь блок feynman - флекс-контейнер
   для удобной работы с эл-ми внутри него*/
   display: flex;
@@ -190,13 +196,13 @@
   line-height: 1.15;
   font-size: 120px;
   width: 648px;
-  margin-top: 100px;
+  margin-top: 0;
   margin-bottom: 70px;
   /*отцентровываем текст внутри блока*/
   text-align: center;
   z-index: 1;
   /*для проверки расстояний и понимания как выглядят блоки*/
-  /*border: 1px solid red;*/
+  border: 1px solid red;
 }
 
 /*позиционирование subtitle в feynman, описание его значений*/

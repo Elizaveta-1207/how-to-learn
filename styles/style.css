@@ -9,18 +9,105 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+/*стили блока шапки с классом header*/
 .header {
+  position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
+  background-color: #f2f2f2;
+  /*вся шапка - флекс-контейнер для удобной работы с эл-ми*/
+  display: flex;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+/*логотип, как отдельный блок*/
+/*назначили нужные размеры и попросили не повторяться :)*/
+.logo {
+  width: 183px;
+  height: 32px;
+  background-image: url('../images/logo_place_header.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*позиционирование логотипа (отдельного блока) в шапке*/
+.logo_place_header {
+  z-index: 3;
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+/*для всех заголовков (элементов с классом title)*/
+.title {
+  font-weight: bold;
+}
+
+/*позиционирование title в шапке, описание его значений*/
+.title_place_header {
+  line-height: 96px;
+  font-size: 102px;
+  width: 730px;
+  z-index: 2;
+  /*сделали элемент флекс-контейнером, чтобы выровнять его*/
+  display: flex;
+  /*выравнивание по центру относительно оси Y*/
+  align-items: center;
+  /*сдвиг влево на 64px*/
+  margin-left: 64px;
+}
+
+/*для всех подзаголовков (элементов с классом subtitle)*/
+.subtitle {
+  font-weight: normal;
+}
+
+/*позиционирование subtitle в шапке, описание его значений*/
+.subtitle_place_header {
+  z-index: 2;
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  line-height: 25px;
+  font-size: 18px;
+  width: 388px;
+}
+
+/*для всех ссылок с классом link*/
+.link {
+  text-decoration: none;
+}
+
+/*создаём синий квадрат-фон и позиционируем его*/
 .header__square-pic {
+  position: absolute;
+  top: 64px;
+  right: 0;
   height: 568px;
   width: 568px;
+  background-color: #2f80ed;
+  z-index: 0;
 }
+
+/*располагаем главную картинку
+задаём нужные размеры, просим не повторяться :)*/
+.main-illustration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*можно было бы сделать, как ниже заккоментировано
+  но я вспомнила про img и решила,
+  что в данном проекте он будет даже лучше.*/
+  /*background-image: url('../images/header-image.png');*/
+  width: 765px;
+  height: 608px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
@@ -28,4 +115,75 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+
+
+/*стили блока с классом feynman*/
+.feynman {
+  position: relative;
+  height: 790px;
+  background-color: #f2f2f2;
+  /*весь блок feynman - флекс-контейнер
+  для удобной работы с эл-ми внутри него*/
+  display: flex;
+  /*росположим элементы внутри контейнера в колонку
+  в направлении сверху вниз*/
+  flex-direction: column;
+  /*разместим все эти элементы по центру*/
+  align-items: center;
+}
+
+/*позиционирование title в feynman, описание его значений*/
+.title_place_feynman {
+  line-height: 1.15;
+  font-size: 120px;
+  width: 648px;
+  margin-top: 100px;
+  margin-bottom: 70px;
+  /*отцентровываем текст внутри блока*/
+  text-align: center;
+  z-index: 1;
+  /*для проверки расстояний и понимания как выглядят блоки*/
+  /*border: 1px solid red;*/
+}
+
+/*позиционирование subtitle в feynman, описание его значений*/
+.subtitle_place_feynman {
+  line-height: 51px;
+  font-size: 36px;
+  /*отцентровываем текст внутри блока*/
+  text-align: center;
+  z-index: 1;
+  margin-top: 0;
+  /*для проверки расстояний и понимания как выглядят блоки*/
+  /*border: 1px solid red;*/
+}
+
+/*для ссылки из блока feynman
+задаём расположение и вид, просим не светиться :D синим*/
+.link_feynman {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  text-align: center;
+  z-index: 1;
+  font-weight: normal;
+  color: #000;
+}
+
+/*располагаем картинку
+задаём нужные размеры, просим не повторяться :)*/
+.feynman-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 867px;
+  height: 637px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
 }

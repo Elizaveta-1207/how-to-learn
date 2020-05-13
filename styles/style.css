@@ -107,7 +107,58 @@
   z-index: 1;
 }
 
+.description {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  /*border: 1px solid red;*/
+}
 
+.two-columns {
+  width: 80%;
+  min-width: 784px;
+  display: flex;
+  flex-direction: row;
+  /*border: 1px solid red;*/
+  justify-content: space-between;
+}
+
+.brief {
+  width: 174px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+  /*display: flex;*/
+  /*border: 1px solid red;*/
+  margin-top: 0;
+}
+
+.main-text {
+  width: 80%;
+  min-width: 784px;
+  margin-top: 0;
+}
+
+.paragraph {
+  list-style: none;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  /*border: 1px solid red;*/
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.main-text :last-child {
+  margin-bottom: 0;
+}
+
+.span-accent {
+  font-weight: bold;
+}
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {

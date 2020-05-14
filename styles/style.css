@@ -6,7 +6,7 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 /*стили блока шапки с классом header*/
@@ -27,13 +27,13 @@
 .logo {
   width: 183px;
   height: 32px;
-  background-image: url('../images/logo_place_header.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 /*позиционирование логотипа (отдельного блока) в шапке*/
-.logo_place_header {
+.logo__place_header {
+  background-image: url("../images/logo_place_header.svg");
   z-index: 3;
   position: absolute;
   top: 30px;
@@ -112,6 +112,7 @@
   z-index: 1;
 }
 
+/*стили блока с классом description*/
 .description {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -120,32 +121,37 @@
   /*border: 1px solid red;*/
 }
 
+/*блок с двумя колонками*/
 .two-columns {
   width: 80%;
   min-width: 784px;
   display: flex;
   flex-direction: row;
+  /*для проверки расстояний и понимания как выглядят блоки*/
   /*border: 1px solid red;*/
   justify-content: space-between;
 }
 
+/*стили для блока с кратким описанием*/
 .brief {
   width: 174px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
-  /*display: flex;*/
+  /*для проверки расстояний и понимания как выглядят блоки*/
   /*border: 1px solid red;*/
   margin-top: 0;
 }
 
+/*стили для столбца с текстом*/
 .main-text {
   width: 80%;
   min-width: 784px;
   margin-top: 0;
 }
 
+/*стили для каждого параграфа*/
 .paragraph {
   list-style: none;
   line-height: 34px;
@@ -157,30 +163,90 @@
   margin-bottom: 30px;
 }
 
+/*стили для последнего параграфа*/
 .main-text :last-child {
+  /*убираем внешний нижний отступ*/
   margin-bottom: 0;
 }
 
+/*выделение фрагмента внутри текста*/
 .span-accent {
   font-weight: bold;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
+.digits {
+  margin-top: 0;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.section-title {
+  line-height: 69px;
+  font-size: 60px;
+  text-align: center;
+  width: 60%;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}
 
+.section-subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  text-align: center;
+  width: 60%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.table {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*border: 1px solid red;*/
+}
+
+.table__cell {
+  list-style: none;
+  width: 250px;
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 0;
+  /*border: 1px solid red;*/
+}
+
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  /*border: 1px solid red;*/
+  margin: 0;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  /*border: 1px solid red;*/
+  margin-top: 20px;
+  margin-bottom: 0;
+}
 
 /*стили блока с классом feynman*/
 .feynman {
   position: relative;
+  /*в задании написано, что высота 790px,
+  но я бы сделала минимальную высоту 800px-810px
+  для более красивого отображения*/
+  /*height: 810px;*/
   height: 790px;
   background-color: #f2f2f2;
   padding-top: 100px;
+  margin-top: 0;
   /*весь блок feynman - флекс-контейнер
   для удобной работы с эл-ми внутри него*/
   display: flex;
@@ -243,4 +309,160 @@
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 0;
+}
+
+.kaufman {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f1f1f;
+  overflow: hidden;
+}
+
+.section-title_theme_dark {
+  color: white;
+  z-index: 1;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
+  z-index: 1;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+  z-index: 1;
+}
+
+.kaufman-triangle {
+  height: 877px;
+  width: 877px;
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: 0;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  margin-top: 0;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  justify-content: center;
+  background-color: #1f1f1f;
+  color: white;
+  /*border: 1px solid red;*/
+}
+
+.columns {
+  display: flex;
+  min-height: 350px;
+  width: 90%;
+  /*border: 1px solid red;*/
+  margin: 0;
+  justify-content: space-between;
+}
+
+.columns__content {
+  position: relative;
+  list-style: none;
+  /*border: 1px solid red;*/
+  margin: 0;
+}
+
+.columns__content_copyright {
+  position: relative;
+  flex-basis: 711px;
+  /*border: 1px solid red;*/
+}
+
+.logo__place_footer {
+  /*border: 1px solid red;*/
+  background-image: url("../images/logo_place_footer.svg");
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.author {
+  margin: 0;
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  margin-top: 18px;
+  line-height: 25px;
+  /* border: 1px solid red;*/
+}
+
+.columns__content_info {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  /*border: 1px solid red;*/
+  margin: 0;
+}
+
+.column-links {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid red;*/
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.link_column {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.columns__content_social {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icon {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid red;*/
+}
+
+.link_social {
+  /*border: 1px solid red;*/
+  padding: 0;
+  margin: 0;
+  display: flex;
+  color: white;
+}
+
+.icon {
+  /*border: 1px solid red;*/
+  margin: auto 0;
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
 }

@@ -118,6 +118,7 @@
   margin-bottom: 100px;
   display: flex;
   justify-content: center;
+  /*для проверки*/
   /*border: 1px solid red;*/
 }
 
@@ -127,9 +128,9 @@
   min-width: 784px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   /*для проверки расстояний и понимания как выглядят блоки*/
   /*border: 1px solid red;*/
-  justify-content: space-between;
 }
 
 /*стили для блока с кратким описанием*/
@@ -139,9 +140,9 @@
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
+  margin-top: 0;
   /*для проверки расстояний и понимания как выглядят блоки*/
   /*border: 1px solid red;*/
-  margin-top: 0;
 }
 
 /*стили для столбца с текстом*/
@@ -157,10 +158,11 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  /*border: 1px solid red;*/
   padding: 0;
   margin-top: 0;
   margin-bottom: 30px;
+  /*для проверки*/
+  /*border: 1px solid red;*/
 }
 
 /*стили для последнего параграфа*/
@@ -174,14 +176,17 @@
   font-weight: bold;
 }
 
+/*стили блока с классом digits*/
 .digits {
   margin-top: 0;
   margin-bottom: 100px;
   display: flex;
+  /*расположим их колонкой для удобства дальнейшей сортировки*/
   flex-direction: column;
   align-items: center;
 }
 
+/*стили, размещение заголовка в блоке digits*/
 .section-title {
   line-height: 69px;
   font-size: 60px;
@@ -192,6 +197,7 @@
   margin-bottom: 20px;
 }
 
+/*стили, размещение подзаголовка в блоке digits*/
 .section-subtitle {
   line-height: 34px;
   font-size: 24px;
@@ -201,39 +207,53 @@
   margin-bottom: 0;
 }
 
+/*созание таблицы с размещением
+в ней элементов в строку с переносом*/
 .table {
   width: 1100px;
   display: flex;
+  /*направление в строку*/
   flex-direction: row;
+  /*перенос элементов*/
   flex-wrap: wrap;
+  /*расположение внутри контейнера:
+  первый и послед эле-ты прижаты к границам,
+  остальное пространство равномерно между ними*/
   justify-content: space-between;
+  /*для проверки*/
   /*border: 1px solid red;*/
 }
 
+/*стили ячейки таблицы*/
 .table__cell {
   list-style: none;
   width: 250px;
   padding: 0;
   margin-top: 60px;
   margin-bottom: 0;
+  /*для проверки*/
   /*border: 1px solid red;*/
 }
 
+/*стили заголовков ячеек*/
 .table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
-  /*border: 1px solid red;*/
   margin: 0;
+  /*для проверки*/
+  /*border: 1px solid red;*/
 }
 
+/*стили текста ячеек*/
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  /*border: 1px solid red;*/
   margin-top: 20px;
   margin-bottom: 0;
+  /*для проверки*/
+  /*border: 1px solid red;*/
 }
 
 /*стили блока с классом feynman*/
@@ -311,6 +331,8 @@
   z-index: 0;
 }
 
+/*стили блока с классом kaufman
+аналогичен блоку digits, но он на тёмной стороне :D*/
 .kaufman {
   position: relative;
   margin-top: 0;
@@ -324,17 +346,19 @@
   overflow: hidden;
 }
 
+/*заголовок для блока kaufman с тёмной модификацией*/
 .section-title_theme_dark {
   color: white;
   z-index: 1;
 }
 
+/*подзаголовок для блока kaufman с тёмной модификацией*/
 .section-subtitle_theme_dark {
   color: white;
   z-index: 1;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+/*стили ячеек таблицы с тёмной стороны*/
 .table__cell_theme_dark {
   width: 200px;
   color: white;
@@ -343,6 +367,8 @@
   z-index: 1;
 }
 
+/*располагаем картинку с треугольником
+задаём нужные размеры, просим не повторяться :)*/
 .kaufman-triangle {
   height: 877px;
   width: 877px;
@@ -350,8 +376,11 @@
   top: 0;
   right: -210px;
   z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
+/*подвал, стили, расположение*/
 .footer {
   position: relative;
   display: flex;
@@ -361,40 +390,54 @@
   justify-content: center;
   background-color: #1f1f1f;
   color: white;
+  /*для проверки*/
   /*border: 1px solid red;*/
 }
 
+/*создаём блок с колонками,
+задаём нужные размеры и стили*/
 .columns {
   display: flex;
   min-height: 350px;
   width: 90%;
-  /*border: 1px solid red;*/
   margin: 0;
+  /*элементы в данном флекс-контейнеры располагаем:
+  крайние прижаты к границам, между ними равномерно пустота*/
   justify-content: space-between;
-}
-
-.columns__content {
-  position: relative;
-  list-style: none;
+  /*для проверки*/
   /*border: 1px solid red;*/
-  margin: 0;
 }
 
+/*непосредственная работа с колонками*/
+.columns__content {
+  list-style: none;
+  margin: 0;
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}
+
+/*работа с первой колонкой, указали размеры
+и posititon для удобства дальнейшего
+расположения элементов в данном блоке (колонке)*/
 .columns__content_copyright {
   position: relative;
   flex-basis: 711px;
+  /*для проверки*/
   /*border: 1px solid red;*/
 }
 
+/*позиционирование логотипа (отдельного блока) в подвале*/
 .logo__place_footer {
-  /*border: 1px solid red;*/
   background-image: url("../images/logo_place_footer.svg");
   height: 35px;
   position: absolute;
   top: 0;
   left: 0;
+  /*для проверки*/
+  /*border: 1px solid red;*/
 }
 
+/*рсположение, стили для "Здесь был я!" :)*/
 .author {
   margin: 0;
   position: absolute;
@@ -402,67 +445,87 @@
   left: 0;
   margin-top: 18px;
   line-height: 25px;
+  /*для проверки*/
   /* border: 1px solid red;*/
 }
 
+/*работа со второй колонкой, сделала
+флекс-контейнером для удобства дальнейшего
+расположения элементов в данном блоке (колонке).
+Попросила элементы внутри выстроиться колонкой :)*/
 .columns__content_info {
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 
+/*Размеры стили для заголовков колонок*/
 .column-heading {
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
-  /*border: 1px solid red;*/
   margin: 0;
+  /*для проверки*/
+  /*border: 1px solid red;*/
 }
 
+/*размещение, стили для всех ссылок в блоке column-links*/
 .column-links {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   display: flex;
   flex-direction: column;
-  /*border: 1px solid red;*/
   margin-top: 20px;
   margin-bottom: 16px;
+  /*для проверки*/
+  /*border: 1px solid red;*/
 }
 
+/*стили для каждой ссылки*/
 .link_column {
   padding: 0;
   margin: 0;
   color: white;
 }
 
+/*работа с третьей колонкой, сделала
+флекс-контейнером для удобства дальнейшего
+расположения элементов в данном блоке (колонке).
+Попросила элементы внутри выстроиться колонкой*/
 .columns__content_social {
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 
+/*размещение, стили для всех ссылок в блоке social-icon*/
 .social-icon {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   display: flex;
   flex-direction: column;
+  /*для проверки*/
   /*border: 1px solid red;*/
 }
 
+/*стили для каждой ссылки*/
 .link_social {
-  /*border: 1px solid red;*/
   padding: 0;
   margin: 0;
   display: flex;
   color: white;
+  /*для проверки*/
+  /*border: 1px solid red;*/
 }
 
+/*работа с каждой иконкой соцсетей для красоты размещения*/
 .icon {
-  /*border: 1px solid red;*/
   margin: auto 0;
   height: 16px;
   width: 16px;
   margin-right: 10px;
+  /*для проверки*/
+  /*border: 1px solid red;*/
 }

@@ -32,7 +32,7 @@
 }
 
 /*позиционирование логотипа (отдельного блока) в шапке*/
-.logo__place_header {
+.logo_place_header {
   background-image: url("../images/logo_place_header.svg");
   z-index: 3;
   position: absolute;
@@ -40,13 +40,17 @@
   left: 64px;
 }
 
-/*для всех заголовков (элементов с классом title)*/
-.title {
+/*для всех заголовков (элементов с классом title),
+но по данному проекту в создании такого класса нет необходимости,
+поэтому строчку про толщину текста пропишу в каждом заголовке.
+удалять не буду. вдруг захотим использовать для всех заголовков для странички!? :)*/
+/*.title {
   font-weight: bold;
-}
+}*/
 
 /*позиционирование title в шапке, описание его значений*/
-.title_place_header {
+.header__title {
+  font-weight: bold;
   line-height: 96px;
   font-size: 102px;
   width: 730px;
@@ -59,13 +63,16 @@
   margin-left: 64px;
 }
 
-/*для всех подзаголовков (элементов с классом subtitle)*/
-.subtitle {
+/*для всех подзаголовков (элементов с классом subtitle),
+но по данному проекту в создании такого класса нет необходимости,
+поэтому строчку про толщину текста пропишу в каждом подзаголовке*/
+/*.subtitle {
   font-weight: normal;
-}
+}*/
 
 /*позиционирование subtitle в шапке, описание его значений*/
-.subtitle_place_header {
+.header__subtitle {
+  font-weight: normal;
   z-index: 2;
   position: absolute;
   bottom: 30px;
@@ -75,29 +82,37 @@
   width: 388px;
 }
 
-/*для всех ссылок с классом link*/
-.link {
+/*для всех ссылок с классом link, но по данному проекту
+в создании такого класса нет необходимости, поэтому
+строчку для отмены подчеркивания пропишу для каждой ссылки*/
+/*.link {
   text-decoration: none;
-}
+}*/
 
-.link_header {
+/*ссфлка для блока header*/
+.header__link {
+  text-decoration: none;
   color: #2f80ed;
 }
 
-/*создаём синий квадрат-фон и позиционируем его*/
-.header__square-pic {
-  position: absolute;
-  top: 64px;
-  right: 0;
-  height: 568px;
-  width: 568px;
-  background-color: #2f80ed;
-  z-index: 0;
+/*поведение ссылки при наведении на неё мышки,
+сначала решила поменять цвет (на белый, например),
+а потом подумала, что прозрачным сделать будет красивее*/
+.header__link:hover {
+  /*прозрачность*/
+  opacity: 0.4;
+  /*прозрачность можно ещё сделать через rgba,
+  но есть ли в этом смысл?
+  да и rgba значений цвета #2f80ed у меня нет :)*/
+  /*color: #fff;*/
+
+  /*для плавного изменения при наведении мышки на ссылку*/
+  transition: 0.5s;
 }
 
 /*располагаем главную картинку
 задаём нужные размеры, просим не повторяться :)*/
-.main-illustration {
+.header__main-illustration {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -110,6 +125,17 @@
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
+}
+
+/*создаём синий квадрат-фон и позиционируем его*/
+.header__square-pic {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
+  z-index: 0;
 }
 
 /*стили блока с классом description*/
@@ -134,7 +160,7 @@
 }
 
 /*стили для блока с кратким описанием*/
-.brief {
+.two-columns__brief {
   width: 174px;
   line-height: 1.2;
   font-size: 18px;
@@ -146,14 +172,14 @@
 }
 
 /*стили для столбца с текстом*/
-.main-text {
+.two-columns__main-text {
   width: 80%;
   min-width: 784px;
   margin-top: 0;
 }
 
 /*стили для каждого параграфа*/
-.paragraph {
+.two-columns__paragraph {
   list-style: none;
   line-height: 34px;
   font-size: 24px;
@@ -166,13 +192,13 @@
 }
 
 /*стили для последнего параграфа*/
-.main-text :last-child {
+.two-columns__main-text :last-child {
   /*убираем внешний нижний отступ*/
   margin-bottom: 0;
 }
 
 /*выделение фрагмента внутри текста*/
-.span-accent {
+.two-columns__span-accent {
   font-weight: bold;
 }
 
@@ -188,6 +214,7 @@
 
 /*стили, размещение заголовка в блоке digits*/
 .section-title {
+  font-weight: bold;
   line-height: 69px;
   font-size: 60px;
   text-align: center;
@@ -263,7 +290,7 @@
   но я бы сделала минимальную высоту 800px-810px
   для более красивого отображения*/
   /*height: 810px;*/
-  height: 790px;
+  min-height: 790px;
   background-color: #f2f2f2;
   padding-top: 100px;
   margin-top: 0;
@@ -278,7 +305,8 @@
 }
 
 /*позиционирование title в feynman, описание его значений*/
-.title_place_feynman {
+.feynman__title {
+  font-weight: bold;
   line-height: 1.15;
   font-size: 120px;
   width: 648px;
@@ -292,7 +320,8 @@
 }
 
 /*позиционирование subtitle в feynman, описание его значений*/
-.subtitle_place_feynman {
+.feynman__subtitle {
+  font-weight: normal;
   line-height: 51px;
   font-size: 36px;
   /*отцентровываем текст внутри блока*/
@@ -305,7 +334,8 @@
 
 /*для ссылки из блока feynman
 задаём расположение и вид, просим не светиться :D синим*/
-.link_feynman {
+.feynman__link {
+  text-decoration: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -318,9 +348,16 @@
   color: #000;
 }
 
+/*добавила прозрачность ссылке при наведении на неё мышки*/
+.feynman__link:hover {
+  /*прозрачность*/
+  opacity: 0.4;
+  /*для плавного изменения при наведении мышки на ссылку*/
+  transition: 0.5s;
+}
 /*располагаем картинку
 задаём нужные размеры, просим не повторяться :)*/
-.feynman-image {
+.feynman__feynman-image {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -369,7 +406,7 @@
 
 /*располагаем картинку с треугольником
 задаём нужные размеры, просим не повторяться :)*/
-.kaufman-triangle {
+.kaufman__triangle {
   height: 877px;
   width: 877px;
   position: absolute;
@@ -378,6 +415,7 @@
   z-index: 0;
   background-size: contain;
   background-repeat: no-repeat;
+  background-image: url("../images/kaufman-triangle.svg");
 }
 
 /*подвал, стили, расположение*/
@@ -396,7 +434,7 @@
 
 /*создаём блок с колонками,
 задаём нужные размеры и стили*/
-.columns {
+.footer__columns {
   display: flex;
   min-height: 350px;
   width: 90%;
@@ -408,59 +446,65 @@
   /*border: 1px solid red;*/
 }
 
-/*непосредственная работа с колонками*/
-.columns__content {
-  list-style: none;
-  margin: 0;
-  /*для проверки*/
-  /*border: 1px solid red;*/
-}
+/*непосредственная работа с колонками
+переименовала согласно БЭМ, но удалять не стала.
+Удобно проверять разу все колонки*/
+/*для проверки*/
+/*.footer__column {
+  border: 1px solid red;
+}*/
 
 /*работа с первой колонкой, указали размеры
 и posititon для удобства дальнейшего
 расположения элементов в данном блоке (колонке)*/
-.columns__content_copyright {
-  position: relative;
+.footer__column_content_copyright {
+  /*position: relative;*/
+  display: flex;
+  flex-direction: column;
   flex-basis: 711px;
+  justify-content: space-between;
+  padding-left: 0;
   /*для проверки*/
   /*border: 1px solid red;*/
 }
 
 /*позиционирование логотипа (отдельного блока) в подвале*/
-.logo__place_footer {
+/*очень жаль, что нельзя было спозиционировать абсолютом...
+он гораздо более привлекательный :D*/
+.logo_place_footer {
   background-image: url("../images/logo_place_footer.svg");
   height: 35px;
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  left: 0;
+  left: 0;*/
   /*для проверки*/
   /*border: 1px solid red;*/
 }
 
 /*рсположение, стили для "Здесь был я!" :)*/
-.author {
-  margin: 0;
-  position: absolute;
+.footer__author {
+  /* position: absolute;
   bottom: 18px;
-  left: 0;
+  left: 0;*/
+  margin-bottom: 18px;
   margin-top: 18px;
   line-height: 25px;
   /*для проверки*/
-  /* border: 1px solid red;*/
+  /*border: 1px solid red;*/
 }
 
 /*работа со второй колонкой, сделала
 флекс-контейнером для удобства дальнейшего
 расположения элементов в данном блоке (колонке).
 Попросила элементы внутри выстроиться колонкой :)*/
-.columns__content_info {
+.footer__column_content_info {
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 
 /*Размеры стили для заголовков колонок*/
-.column-heading {
+.footer__column-heading {
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
@@ -470,7 +514,8 @@
 }
 
 /*размещение, стили для всех ссылок в блоке column-links*/
-.column-links {
+.footer__column-links {
+  list-style: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
@@ -478,50 +523,42 @@
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 16px;
+  padding-left: 0;
   /*для проверки*/
   /*border: 1px solid red;*/
 }
 
-/*стили для каждой ссылки*/
-.link_column {
+/*стили для каждой ссылки в блоке footer*/
+.footer__column-link {
+  text-decoration: none;
   padding: 0;
   margin: 0;
   color: white;
+  display: flex;
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}
+
+/*добавила прозрачность ссылке при наведении на неё мышки*/
+.footer__column-link:hover {
+  /*прозрачность*/
+  opacity: 0.4;
+  /*для плавного изменения при наведении мышки на ссылку*/
+  transition: 0.5s;
 }
 
 /*работа с третьей колонкой, сделала
 флекс-контейнером для удобства дальнейшего
 расположения элементов в данном блоке (колонке).
 Попросила элементы внутри выстроиться колонкой*/
-.columns__content_social {
+.footer__column_content_social {
   padding: 0;
   display: flex;
   flex-direction: column;
-}
-
-/*размещение, стили для всех ссылок в блоке social-icon*/
-.social-icon {
-  line-height: 30px;
-  font-size: 18px;
-  font-weight: normal;
-  display: flex;
-  flex-direction: column;
-  /*для проверки*/
-  /*border: 1px solid red;*/
-}
-
-/*стили для каждой ссылки*/
-.link_social {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  color: white;
-  /*для проверки*/
-  /*border: 1px solid red;*/
 }
 
 /*работа с каждой иконкой соцсетей для красоты размещения*/
-.icon {
+.footer__social-icon {
   margin: auto 0;
   height: 16px;
   width: 16px;

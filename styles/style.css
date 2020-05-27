@@ -155,7 +155,7 @@
   width: 568px;
   background-color: #2f80ed;
   z-index: 0;
-  animation: rotation 20s infinite;
+  animation: rotation 20s linear infinite;
 }
 
 /*стили блока с классом description*/
@@ -554,6 +554,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/kaufman-triangle.svg");
+  animation: rotation 20s linear infinite;
 }
 
 /*подвал, стили, расположение*/

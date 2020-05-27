@@ -291,6 +291,52 @@
   /* border: 1px solid red; */
 }
 
+/*стили блока с классом video*/
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  /*создаём родительский элемент для позиционирования видео*/
+  position: relative;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.video__iframes {
+  /*позиционируем абсолютно. Просим видео "налягать" :D на следующий блок на 60 px.
+  Так же обязательно указываем второй параметр left:auto; ,
+  чтобы от левого края все позиуионировалось к центру*/
+  position: absolute;
+  bottom: -60px;
+  left: auto;
+  display: flex;
+  margin: 50px 0 0;
+  padding: 0;
+  position: relative;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.video__iframe {
+  width: 560px;
+  height: 315px;
+  /*расстояние между видео стало 20px*/
+  margin: 0 10px;
+  /* border: 1px solid red; */
+}
+
+/*стили блока с классом oakley*/
+.oakley {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+
+}
+
 /*стили блока с классом digits*/
 .digits {
   margin-top: 0;

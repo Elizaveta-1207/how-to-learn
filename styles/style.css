@@ -1,3 +1,14 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -90,10 +101,11 @@
   text-decoration: none;
 }*/
 
-/*ссфлка для блока header*/
+/*ссылка для блока header*/
 .header__link {
   text-decoration: none;
   color: #2f80ed;
+  transition: opacity 0.5s linear;
 }
 
 /*поведение ссылки при наведении на неё мышки,
@@ -108,7 +120,7 @@
   /*color: #fff;*/
 
   /*для плавного изменения при наведении мышки на ссылку*/
-  transition: 0.5s;
+  /*transition: 0.5s;*/
 }
 
 /*можно добавить при посещении странички подсветку ссылки
@@ -143,6 +155,7 @@
   width: 568px;
   background-color: #2f80ed;
   z-index: 0;
+  animation: rotation 20s infinite;
 }
 
 /*стили блока с классом description*/
@@ -210,6 +223,74 @@
   font-weight: bold;
 }
 
+/*стили блока с классом techniques*/
+.techniques {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.cards {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  width: 920px;
+  /* justify-content: space-between; */
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.cards__item {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 100px 0 0;
+  /*для проверки
+  border увеличивает блок, поэтому если включим проверку, то карточки съедут - и это норм*/
+  /* border: 1px solid red; */
+}
+
+/*обнуляем mardgin для третьей карточки, чтобы она не требовала для себя новую строку :D*/
+.cards__item:nth-of-type(3n) {
+  margin: 0;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 60px 40px 43px;
+  padding: 0;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.cards__title {
+  font-weight: bold;
+  line-height: 1.15;
+  font-size: 24px;
+  margin: 0 0 16px;
+  padding: 0;
+  text-align: center;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.cards__description {
+  line-height: 23px;
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
 /*стили блока с классом digits*/
 .digits {
   margin-top: 0;
@@ -223,7 +304,7 @@
 /*стили, размещение заголовка в блоке digits*/
 .section-title {
   font-weight: bold;
-  line-height: 69px;
+  line-height: 1.15;
   font-size: 60px;
   text-align: center;
   width: 60%;
@@ -355,6 +436,7 @@
   z-index: 1;
   font-weight: normal;
   color: #000;
+  transition: opacity 0.5s linear;
 }
 
 /*добавила прозрачность ссылке при наведении на неё мышки*/
@@ -362,7 +444,7 @@
   /*прозрачность*/
   opacity: 0.4;
   /*для плавного изменения при наведении мышки на ссылку*/
-  transition: 0.5s;
+  /*transition: 0.5s;*/
 }
 
 /*располагаем картинку
@@ -546,6 +628,7 @@
   margin: 0;
   color: white;
   display: flex;
+  transition: opacity 0.5s linear;
   /*для проверки*/
   /*border: 1px solid red;*/
 }
@@ -555,7 +638,7 @@
   /*прозрачность*/
   opacity: 0.4;
   /*для плавного изменения при наведении мышки на ссылку*/
-  transition: 0.5s;
+  /*transition: 0.5s;*/
 }
 
 /*работа с третьей колонкой, сделала

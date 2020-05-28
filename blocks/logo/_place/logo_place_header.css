@@ -1,6 +1,6 @@
 /*позиционирование логотипа (отдельного блока) в шапке*/
 .logo_place_header {
-  background-image: url("../../../images/logo_place_header.svg");
+  background-image: url("../../../images/logo/_place/logo_place_header.svg");
   z-index: 3;
   position: absolute;
   top: 30px;

@@ -230,6 +230,9 @@
   align-items: center;
   width: 80%;
   margin: auto;
+  margin-bottom: 100px;
+  /*для проверки*/
+  /* border: 1px solid red; */
 }
 
 .cards {
@@ -298,19 +301,18 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  /*создаём родительский элемент для позиционирования видео*/
+  /*создаём родительский элемент для позиционирования видео.
+  Просим видео "налягать" :D на следующий блок на 60 px.*/
   position: relative;
+  bottom: -60px;
+  /*компенсируем свдиг по позиционированию margin-top: -60px; ,
+  чтобы между блоками techniques и video было расстояние в 100px, как и прописано*/
+  margin-top: -60px;
   /*для проверки*/
   /* border: 1px solid red; */
 }
 
 .video__iframes {
-  /*позиционируем абсолютно. Просим видео "налягать" :D на следующий блок на 60 px.
-  Так же обязательно указываем второй параметр left:auto; ,
-  чтобы от левого края все позиуионировалось к центру*/
-  position: absolute;
-  bottom: -60px;
-  left: auto;
   display: flex;
   margin: 50px 0 0;
   padding: 0;
@@ -334,7 +336,99 @@
   display: flex;
   justify-content: center;
   background-color: #f2f2f2;
+  margin: 0;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
 
+/*стили блока с классом feynman*/
+.feynman {
+  position: relative;
+  /*в задании написано, что высота 790px,
+  но я бы сделала минимальную высоту 800px-810px
+  для более красивого отображения*/
+  /*height: 810px;*/
+  min-height: 790px;
+  background-color: #f2f2f2;
+  padding-top: 100px;
+  margin-top: 0;
+  margin-bottom: 100px;
+  /*весь блок feynman - флекс-контейнер
+  для удобной работы с эл-ми внутри него*/
+  display: flex;
+  /*росположим элементы внутри контейнера в колонку
+  в направлении сверху вниз*/
+  flex-direction: column;
+  /*разместим все эти элементы по центру*/
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+/*позиционирование title в feynman, описание его значений*/
+.feynman__title {
+  font-weight: bold;
+  line-height: 1.15;
+  font-size: 120px;
+  width: 648px;
+  margin-top: 0;
+  margin-bottom: 70px;
+  /*отцентровываем текст внутри блока*/
+  text-align: center;
+  z-index: 1;
+  /*для проверки расстояний и понимания как выглядят блоки*/
+  /* border: 1px solid red; */
+}
+
+/*позиционирование subtitle в feynman, описание его значений*/
+.feynman__subtitle {
+  font-weight: normal;
+  line-height: 51px;
+  font-size: 36px;
+  /*отцентровываем текст внутри блока*/
+  text-align: center;
+  z-index: 1;
+  margin-top: 0;
+  /*для проверки расстояний и понимания как выглядят блоки*/
+  /* border: 1px solid red; */
+}
+
+/*для ссылки из блока feynman
+задаём расположение и вид, просим не светиться :D синим*/
+.feynman__link {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  text-align: center;
+  z-index: 1;
+  font-weight: normal;
+  color: #000;
+  transition: opacity 0.5s linear;
+  /* border: 1px solid red; */
+}
+
+/*добавила прозрачность ссылке при наведении на неё мышки*/
+.feynman__link:hover {
+  /*прозрачность*/
+  opacity: 0.4;
+  /*для плавного изменения при наведении мышки на ссылку*/
+  /*transition: 0.5s;*/
+}
+
+/*располагаем картинку
+задаём нужные размеры, просим не повторяться :)*/
+.feynman__feynman-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 867px;
+  height: 637px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
 /*стили блока с классом digits*/
@@ -419,91 +513,107 @@
   /*border: 1px solid red;*/
 }
 
-/*стили блока с классом feynman*/
-.feynman {
-  position: relative;
-  /*в задании написано, что высота 790px,
-  но я бы сделала минимальную высоту 800px-810px
-  для более красивого отображения*/
-  /*height: 810px;*/
-  min-height: 790px;
+/*стили блока с классом khan*/
+.khan {
   background-color: #f2f2f2;
-  padding-top: 100px;
-  margin-top: 0;
-  /*весь блок feynman - флекс-контейнер
-  для удобной работы с эл-ми внутри него*/
-  display: flex;
-  /*росположим элементы внутри контейнера в колонку
-  в направлении сверху вниз*/
-  flex-direction: column;
-  /*разместим все эти элементы по центру*/
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 105px;
+  /*для проверки*/
+  /* border: 1px solid red; */
 }
 
-/*позиционирование title в feynman, описание его значений*/
-.feynman__title {
+.khan__container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.khan__author {
+  margin: 0;
+  padding: 0;
+  line-height: 42px;
+  font-size: 30px;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.khan__title {
   font-weight: bold;
   line-height: 1.15;
-  font-size: 120px;
-  width: 648px;
-  margin-top: 0;
-  margin-bottom: 70px;
-  /*отцентровываем текст внутри блока*/
-  text-align: center;
-  z-index: 1;
-  /*для проверки расстояний и понимания как выглядят блоки*/
-  /*border: 1px solid red;*/
+  font-size: 60px;
+  margin: 0;
+  padding: 0;
+  /*для проверки*/
+  /* border: 1px solid red; */
 }
 
-/*позиционирование subtitle в feynman, описание его значений*/
-.feynman__subtitle {
-  font-weight: normal;
-  line-height: 51px;
-  font-size: 36px;
-  /*отцентровываем текст внутри блока*/
-  text-align: center;
-  z-index: 1;
-  margin-top: 0;
-  /*для проверки расстояний и понимания как выглядят блоки*/
-  /*border: 1px solid red;*/
+.khan__quote {
+  line-height: 34px;
+  font-size: 24px;
+  width: 790px;
+  margin: 50px 0 36px;
+  padding: 0;
+  /*для проверки*/
+  /* border: 1px solid red; */
 }
 
-/*для ссылки из блока feynman
-задаём расположение и вид, просим не светиться :D синим*/
-.feynman__link {
+.khan__quote-author {
+  font-weight: bold;
+  line-height: 1.15;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.khan__quote-author-subline {
+  line-height: 1.15;
+  font-size: 24px;
+  margin: 10px 0 68px;
+  padding: 0;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.khan__block-container {
+  display: flex;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  /*как бы накрываем нашей картинкой блок, сохраняя ширину.
+  или же просим картинку заполнить собой все пространство 620x608px.
+  и позицционируем её так, чтобы она отображалась сверху, а остальное обрезалось.*/
+  object-fit: cover;
+  object-position: top;
+  margin-right: 48px;
+}
+
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
   text-decoration: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 48px;
-  line-height: 51px;
-  font-size: 36px;
-  text-align: center;
-  z-index: 1;
-  font-weight: normal;
-  color: #000;
+  color: #2f80ed;
+  padding: 0;
+  margin: 0;
   transition: opacity 0.5s linear;
+  align-self: flex-start;
+  /*для проверки*/
+  /* border: 1px solid red; */
 }
 
-/*добавила прозрачность ссылке при наведении на неё мышки*/
-.feynman__link:hover {
-  /*прозрачность*/
+.khan__buy-link:hover {
   opacity: 0.4;
-  /*для плавного изменения при наведении мышки на ссылку*/
-  /*transition: 0.5s;*/
-}
-
-/*располагаем картинку
-задаём нужные размеры, просим не повторяться :)*/
-.feynman__feynman-image {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 867px;
-  height: 637px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 0;
 }
 
 /*стили блока с классом kaufman
@@ -555,6 +665,45 @@
   background-repeat: no-repeat;
   background-image: url("../images/kaufman-triangle.svg");
   animation: rotation 20s linear infinite;
+}
+
+/*стили блока с классом resources*/
+.resources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0 217px;
+}
+
+.resources__logo-zone {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 1100px;
+  height: 38px;
+  padding: 0;
+  margin: 80px 0 0;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  /*Сделала opacity, как написано в брифе, но логотипы итак бледные,
+  а мы их делаем ещё бледнее при наведении :(
+  от количества бледности можно и самому побледнеть :D
+  Написала альтернативный вариант с transform: scale(); ,
+  возможно, в будущем он будет более уместен */
+  transition: opacity 0.5s linear;
+  /* transition: transform 0.5s linear; */
+}
+
+.resources__logo:hover {
+  opacity: 0.4;
+  /* transform: scale(1.2); */
 }
 
 /*подвал, стили, расположение*/

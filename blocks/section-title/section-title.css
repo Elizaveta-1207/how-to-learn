@@ -1,0 +1,13 @@
+@import url(./_theme/section-title_theme_dark.css);
+
+/*стили, размещение заголовка в блоке digits*/
+.section-title {
+  font-weight: bold;
+  line-height: 1.15;
+  font-size: 60px;
+  text-align: center;
+  width: 60%;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}

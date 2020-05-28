@@ -1,0 +1,9 @@
+/*стили блока с классом digits*/
+.digits {
+  margin-top: 0;
+  margin-bottom: 100px;
+  display: flex;
+  /*расположим их колонкой для удобства дальнейшей сортировки*/
+  flex-direction: column;
+  align-items: center;
+}

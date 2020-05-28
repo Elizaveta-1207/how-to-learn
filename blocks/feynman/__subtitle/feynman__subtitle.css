@@ -1,0 +1,12 @@
+/*позиционирование subtitle в feynman, описание его значений*/
+.feynman__subtitle {
+  font-weight: normal;
+  line-height: 51px;
+  font-size: 36px;
+  /*отцентровываем текст внутри блока*/
+  text-align: center;
+  z-index: 1;
+  margin-top: 0;
+  /*для проверки расстояний и понимания как выглядят блоки*/
+  /* border: 1px solid red; */
+}

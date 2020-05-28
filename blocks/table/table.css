@@ -1,0 +1,23 @@
+@import url(./__cell/table__cell.css);
+@import url(./__heading/table__heading.css);
+@import url(./__text/table__text.css);
+
+@import url(./__cell/_theme/table__cell_theme_dark.css);
+
+/*созание таблицы с размещением
+в ней элементов в строку с переносом*/
+.table {
+  padding-left: 0;
+  width: 1100px;
+  display: flex;
+  /*направление в строку*/
+  flex-direction: row;
+  /*перенос элементов*/
+  flex-wrap: wrap;
+  /*расположение внутри контейнера:
+  первый и послед эле-ты прижаты к границам,
+  остальное пространство равномерно между ними*/
+  justify-content: space-between;
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}

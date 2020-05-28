@@ -1,0 +1,10 @@
+@import url(./__logo-zone/resources__logo-zone.css);
+@import url(./__logo/resources__logo.css);
+
+/*стили блока с классом resources*/
+.resources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0 217px;
+}

@@ -1,0 +1,13 @@
+/*стили для столбца с текстом*/
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  margin-top: 0;
+  /*border: 1px solid red;*/
+}
+
+/*стили для последнего параграфа*/
+.two-columns__main-text :last-child {
+  /*убираем внешний нижний отступ*/
+  margin-bottom: 0;
+}

@@ -1,0 +1,11 @@
+/*стили блока с классом oakley*/
+.oakley {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  margin: 0;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}

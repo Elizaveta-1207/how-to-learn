@@ -1,0 +1,17 @@
+/*стили для каждой ссылки в блоке footer*/
+.footer__column-link {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  display: flex;
+  transition: opacity 0.5s linear;
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}
+
+/*добавила прозрачность ссылке при наведении на неё мышки*/
+.footer__column-link:hover {
+  /*прозрачность*/
+  opacity: 0.4;
+}

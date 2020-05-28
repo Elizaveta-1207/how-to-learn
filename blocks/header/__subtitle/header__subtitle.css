@@ -1,0 +1,11 @@
+/*позиционирование subtitle в шапке, описание его значений*/
+.header__subtitle {
+  font-weight: normal;
+  z-index: 2;
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  line-height: 25px;
+  font-size: 18px;
+  width: 388px;
+}

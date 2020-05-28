@@ -1,0 +1,15 @@
+/*позиционирование title в шапке, описание его значений*/
+.header__title {
+  font-weight: bold;
+  line-height: 96px;
+  font-size: 102px;
+  width: 730px;
+  z-index: 2;
+  /*сделали элемент флекс-контейнером, чтобы выровнять его*/
+  display: flex;
+  /*выравнивание по центру относительно оси Y*/
+  align-items: center;
+  /*align-self: center;*/
+  /*сдвиг влево на 64px*/
+  margin-left: 64px;
+}

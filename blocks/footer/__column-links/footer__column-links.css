@@ -1,0 +1,14 @@
+/*размещение, стили для всех ссылок в блоке column-links*/
+.footer__column-links {
+  list-style: none;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  padding-left: 0;
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}

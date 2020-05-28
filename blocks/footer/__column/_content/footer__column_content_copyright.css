@@ -1,0 +1,13 @@
+/*работа с первой колонкой, указали размеры
+и posititon для удобства дальнейшего
+расположения элементов в данном блоке (колонке)*/
+.footer__column_content_copyright {
+  /*position: relative;*/
+  display: flex;
+  flex-direction: column;
+  flex-basis: 711px;
+  justify-content: space-between;
+  padding-left: 0;
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}

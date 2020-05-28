@@ -1,0 +1,15 @@
+.cards__item {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 100px 0 0;
+  /*для проверки
+  border увеличивает блок, поэтому если включим проверку, то карточки съедут - и это норм*/
+  /* border: 1px solid red; */
+}
+
+/*обнуляем mardgin для третьей карточки, чтобы она не требовала для себя новую строку :D*/
+.cards__item:nth-of-type(3n) {
+  margin: 0;
+}

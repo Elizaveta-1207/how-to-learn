@@ -1,0 +1,16 @@
+/*располагаем главную картинку
+задаём нужные размеры, просим не повторяться :)*/
+.header__main-illustration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*можно было бы сделать, как ниже заккоментировано
+  но я вспомнила про img и решила,
+  что в данном проекте он будет даже лучше.*/
+  /*background-image: url('../images/header-image.png');*/
+  width: 765px;
+  height: 608px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}

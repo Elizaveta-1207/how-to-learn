@@ -1,0 +1,7 @@
+.video__iframe {
+  width: 560px;
+  height: 315px;
+  /*расстояние между видео стало 20px*/
+  margin: 0 10px;
+  /* border: 1px solid red; */
+}

@@ -1,0 +1,10 @@
+/*стили ячейки таблицы*/
+.table__cell {
+  list-style: none;
+  width: 250px;
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 0;
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}

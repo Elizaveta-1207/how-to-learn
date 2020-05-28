@@ -1,0 +1,5 @@
+/*подзаголовок для блока kaufman с тёмной модификацией*/
+.section-subtitle_theme_dark {
+  color: white;
+  z-index: 1;
+}

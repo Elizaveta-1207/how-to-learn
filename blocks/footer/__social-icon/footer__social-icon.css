@@ -1,0 +1,9 @@
+/*работа с каждой иконкой соцсетей для красоты размещения*/
+.footer__social-icon {
+  margin: auto 0;
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}

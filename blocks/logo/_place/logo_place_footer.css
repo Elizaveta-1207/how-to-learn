@@ -1,0 +1,12 @@
+/*позиционирование логотипа (отдельного блока) в подвале*/
+/*очень жаль, что нельзя было спозиционировать абсолютом...
+он гораздо более привлекательный :D*/
+.logo_place_footer {
+  background-image: url("../../../images/logo_place_footer.svg");
+  height: 35px;
+  /*position: absolute;
+  top: 0;
+  left: 0;*/
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}

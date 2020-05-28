@@ -1,0 +1,20 @@
+@import url(./__iframes/video__iframes.css);
+@import url(./__iframe/video__iframe.css);
+
+/*стили блока с классом video*/
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  /*создаём родительский элемент для позиционирования видео.
+  Просим видео "налягать" :D на следующий блок на 60 px.*/
+  position: relative;
+  bottom: -60px;
+  /*компенсируем свдиг по позиционированию margin-top: -60px; ,
+  чтобы между блоками techniques и video было расстояние в 100px, как и прописано*/
+  margin-top: -60px;
+  /*для проверки*/
+  /* border: 1px solid red; */
+}

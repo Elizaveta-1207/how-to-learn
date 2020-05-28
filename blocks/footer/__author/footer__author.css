@@ -1,0 +1,12 @@
+/*рсположение, стили для "Здесь был я!" :)*/
+.footer__author {
+  /* position: absolute;
+  bottom: 18px;
+  left: 0;*/
+  margin-bottom: 18px;
+  margin-top: 18px;
+  line-height: 25px;
+  font-size: 18px;
+  /*для проверки*/
+  /*border: 1px solid red;*/
+}

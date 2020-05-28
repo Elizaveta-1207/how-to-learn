@@ -1,0 +1,12 @@
+/*располагаем картинку
+задаём нужные размеры, просим не повторяться :)*/
+.feynman__feynman-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 867px;
+  height: 637px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}

@@ -1,0 +1,14 @@
+/*располагаем картинку с треугольником
+задаём нужные размеры, просим не повторяться :)*/
+.kaufman__triangle {
+  height: 877px;
+  width: 877px;
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../../images/kaufman-triangle.svg");
+  animation: rotation 20s linear infinite;
+}

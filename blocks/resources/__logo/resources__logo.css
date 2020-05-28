@@ -1,0 +1,18 @@
+.resources__logo {
+  width: 270px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  /*Сделала opacity, как написано в брифе, но логотипы итак бледные,
+  а мы их делаем ещё бледнее при наведении :(
+  от количества бледности можно и самому побледнеть :D
+  Написала альтернативный вариант с transform: scale(); ,
+  возможно, в будущем он будет более уместен */
+  transition: opacity 0.5s linear;
+  /* transition: transform 0.5s linear; */
+}
+
+.resources__logo:hover {
+  opacity: 0.4;
+  /* transform: scale(1.2); */
+}

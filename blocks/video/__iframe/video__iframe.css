@@ -3,5 +3,6 @@
   height: 315px;
   /*расстояние между видео стало 20px*/
   margin: 0 10px;
+  border: none;
   /* border: 1px solid red; */
 }

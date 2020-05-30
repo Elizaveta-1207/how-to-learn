@@ -1,3 +1,28 @@
+@font-face {
+  src: url(../../fonts/HelveticaNeueCyr-Roman.woff);
+  font-family: 'Helvetica Neue';
+}
+
+@font-face {
+  src: url(../../fonts/HelveticaNeueCyr-Italic.woff);
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+}
+
+@font-face {
+  src: url(../../fonts/HelveticaNeueCyr-Bold.woff);
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+}
+
+@font-face {
+  src: url(../../fonts/HelveticaNeueCyr-BoldItalic.woff);
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  font-weight: bold;
+}
+
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */

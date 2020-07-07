@@ -2,6 +2,7 @@
 
 /*стили, размещение подзаголовка в блоке digits*/
 .section-subtitle {
+  /* color: red; */
   line-height: 34px;
   font-size: 24px;
   text-align: center;
